@@ -276,14 +276,17 @@
     }
 
     &::after {
+      // тут изменила
       content: "";
       position: absolute;
       bottom: 0;
-      width: 100%;
+      width: 0%;
       height: 2px;
       background-color: $c-light;
       display: none;
       left: 0;
+      transition: width 1s ease 0.3s;
+      opacity: 1;
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -313,6 +316,14 @@
         opacity: 1;
         background-color: $c-purple;
       }
+    }
+  }
+}
+
+.loaded .page-header__menu {
+  a {
+    &::after {
+      width: 100%;
     }
   }
 }

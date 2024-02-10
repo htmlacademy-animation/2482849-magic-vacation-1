@@ -1,4 +1,11 @@
 export default () => {
+
+  const body = document.querySelector('body');
+  
+  window.addEventListener('DOMContentLoaded', ()=> {
+    body.classList.add('loaded');
+  })
+
   let footerTogglers = document.querySelectorAll(`.js-footer-toggler`);
 
   if (footerTogglers.length) {

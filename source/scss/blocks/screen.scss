@@ -14,7 +14,7 @@
     min-height: calc(var(--vh, 1vh) * 100);
   }
 
-  @media (max-width: $tablet - 1) and (orientation: landscape) {
+  @media (max-width: $tablet) and (orientation: landscape) {
     height: 100vh;
   }
 }
@@ -40,12 +40,15 @@
 
 .screen__footer {
   position: absolute;
-  bottom: 0;
+  opacity: 0;
   left: 0;
   right: 0;
+  bottom: -4%;
   color: $c-dark;
   background-color: $c-light;
   z-index: 1;
+  transition: all 0.3s cubic-bezier(0,.67,.57,.8) 0.1s;
+  // //! тут поменяла
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
@@ -68,6 +71,11 @@
       height: 16rem;
     }
   }
+}
+
+.loaded .screen__footer {
+  bottom: 0%;
+  opacity: 1;
 }
 
 .screen__footer-wrapper {

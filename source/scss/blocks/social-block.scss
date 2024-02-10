@@ -31,9 +31,10 @@
   display: block;
   width: 4rem;
   height: 4rem;
+  transform: scale(0.1);
   color: $c-dark;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s cubic-bezier(.47,.23,.78,1.39) 0.3s;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -52,7 +53,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, width 6s ease 1s,  height 6s ease 1s;
   }
 
   svg {
@@ -97,6 +98,10 @@
       border-color: $c-purple;
     }
   }
+}
+
+.loaded .social-block__toggler {
+  transform: scale(1);
 }
 
 .social-block__list {

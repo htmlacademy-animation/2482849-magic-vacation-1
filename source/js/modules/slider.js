@@ -15,6 +15,7 @@ export default () => {
         keyboard: {
           enabled: true
         },
+        parallax: true,
         on: {
           slideChange: () => {
             if (storySlider.activeIndex === 0 || storySlider.activeIndex === 1) {
@@ -49,6 +50,7 @@ export default () => {
         keyboard: {
           enabled: true
         },
+        parallax: true,
         on: {
           slideChange: () => {
             if (storySlider.activeIndex === 0) {

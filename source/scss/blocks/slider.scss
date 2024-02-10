@@ -1,3 +1,15 @@
+// Эффект fadeIn для текста
+@keyframes fadeIn {
+  0% { 
+    transform: translateY(1.5rem);
+    opacity: 0;
+    }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+
 .slider {
   position: relative;
   flex-grow: 1;
@@ -96,6 +108,7 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  animation: fadeIn 1.5s;
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;

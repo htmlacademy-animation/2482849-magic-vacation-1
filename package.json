@@ -40,7 +40,7 @@
     "build": "webpack",
     "webp": "gulp webp",
     "sprite": "gulp sprite",
-    "start": "webpack-dev-server --open"
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --open"
   },
   "browserslist": [
     "last 2 versions",

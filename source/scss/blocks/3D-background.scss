@@ -1,0 +1,34 @@
+.screen--3Dbackground {
+  flex-grow: 1;
+  display: flex;
+  position: absolute;
+  bottom: -100%;
+  // bottom: 0;
+  flex-direction: column;
+  padding: 14.6rem 0 7.7rem;
+  width: 100%;
+  background-color: $c-dark;
+  // height: 1vh;
+  transition: none;
+
+  @media (min-width: $stop-scaling) {
+    padding: 146px 0 65px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    padding: 5.9rem 0;
+  }
+
+  @media (max-width: $tablet) and (orientation: landscape) {
+    padding: 9rem 0 6rem;
+  }
+
+  @media (max-width: $mobile) and (orientation: landscape) {
+    padding: 5rem 0 1.5rem;
+  }
+}
+
+.screen--prizes.active ~ .screen--3Dbackground {
+  bottom: 0;
+  transition: bottom 0.8s ease-in;
+}

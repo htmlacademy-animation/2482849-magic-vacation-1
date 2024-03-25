@@ -8,11 +8,9 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
-import textAppearanceAnimation from './text-appearance-animation.js';
+import textAppearance from './modules/text-appearance.js';
 
 // init modules
-
-const title = document.querySelector('.intro__title');
 
 mobileHeight();
 slider();
@@ -22,7 +20,7 @@ chat();
 result();
 form();
 social();
-textAppearanceAnimation(title);
+textAppearance();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();

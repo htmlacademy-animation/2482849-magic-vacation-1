@@ -1,4 +1,4 @@
-function textAppearanceAnimation (element, animSettings) {
+function textAppearanceAnimation (element) {
     if (!element) {
         return null;
     }
@@ -28,7 +28,6 @@ function textAppearanceAnimation (element, animSettings) {
     });
 
     element.textContent = '';
-
     for (const line of lines) {
         element.appendChild(line);
     }

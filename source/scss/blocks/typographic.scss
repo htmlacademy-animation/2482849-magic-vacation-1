@@ -9,11 +9,13 @@
     overflow: hidden;
     display: flex;
     flex-wrap: nowrap;
+    padding-top: 2%;
 }
 
 .letter {
     display: inline-block;
     transform: translateY(203%);
+    overflow: visible;
 
     &--prepared {
         will-change: transform;

@@ -1,0 +1,49 @@
+@keyframes up {
+    to {
+        transform: translateY(0%);
+    }
+  }
+
+.line {
+    display: block;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.letter {
+    display: inline-block;
+    transform: translateY(203%);
+
+    &--prepared {
+        will-change: transform;
+    }
+
+    &--appeared {
+        animation-name: up;
+        animation-duration: 1.3s;
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+
+        &:nth-child(1n) {
+            animation-delay: 200ms;
+        }
+
+        &:nth-child(2n) {
+            animation-delay: 100ms;
+        }
+
+        &:nth-child(3n) {
+            animation-delay: 0s;
+        }
+
+        &:nth-child(4n) {
+            animation-delay: 100ms;
+        }
+
+        &:nth-child(5n) {
+            animation-delay: 200ms;
+        }
+    }
+}

@@ -179,6 +179,14 @@
     margin-top: auto;
     margin-bottom: 20vh;
     overflow: visible;
+
+    @media (max-width: $tablet) {
+      width: 40vw;
+    }
+  
+    @media (max-width: $mobile) {
+      width: 64vw;
+    }
   }
 
   &--leaf {

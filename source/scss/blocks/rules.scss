@@ -1,3 +1,34 @@
+@keyframes item-appear {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes text-appear {
+  to { 
+    opacity: 1; 
+    transform: translateX(0);
+  }
+}
+
+@keyframes btn-opacity {
+  to { 
+    opacity: 1;
+  }
+}
+
+@keyframes btn-stratch {
+  to { 
+    font-size: 2.4rem;
+  }
+}
+
+@keyframes btn-color {
+  to { 
+    color: $c-purple;
+  }
+}
+
 .rules {
   position: relative;
   flex-grow: 1;
@@ -144,12 +175,20 @@
     font-size: 1.2rem;
   }
 
+  // ! Меняем тут
+
   &::before {
     content: counter(li);
+    animation-name: item-appear;
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(.67,.16,.62,1.39);
+    animation-fill-mode: forwards;
+    animation-direction: normal;
     counter-increment: li;
     position: absolute;
     top: 0;
     left: 0;
+    transform: scale(0);
     width: 4.5rem;
     height: 4.5rem;
     font-family: $font-alt;
@@ -179,10 +218,50 @@
 
   p {
     margin: 0;
+    opacity: 0;
+    animation-name: text-appear;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    transform: translateX(2rem);
+    animation-timing-function: cubic-bezier(.67,.16,.49,.82);
 
     @media (max-width: $tablet) and (orientation: portrait) {
       min-height: calc(1.4rem * 2.2);
     }
+  }
+}
+
+.rules__item:nth-child(1) {
+  p {
+    animation-delay: 0.2s;
+  }
+}
+
+.rules__item:nth-child(2) {
+  &::before {
+    animation-delay: 0.5s;
+  }
+  p {
+    animation-delay: 0.7s;
+  }
+}
+
+.rules__item:nth-child(3) {
+  &::before {
+    animation-delay: 1s;
+  }
+  p {
+    animation-delay: 1.2s;
+  }
+}
+
+.rules__item:nth-child(4) {
+  &::before {
+    animation-delay: 1.5s;
+  }
+  p {
+    animation-delay: 1.7s;
   }
 }
 
@@ -210,4 +289,15 @@
     bottom: 2rem;
     right: 1.5rem;
   }
+}
+
+.rules__link.btn {
+  font-size: 0;
+  color: transparent;
+  opacity: 0;
+  animation-name: btn-opacity, btn-stratch, btn-color;
+  animation-duration: 0s, 0.8s, 0.5s;
+  animation-delay: 2s, 2s, 2.5s;
+  animation-timing-function: ease, cubic-bezier(.67,.16,.57,1.29), ease-in;
+  animation-fill-mode: forwards;
 }

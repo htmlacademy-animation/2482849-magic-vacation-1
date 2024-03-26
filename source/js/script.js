@@ -8,8 +8,10 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
+import textAppearance from './modules/text-appearance.js';
 
 // init modules
+
 mobileHeight();
 slider();
 menu();
@@ -18,6 +20,7 @@ chat();
 result();
 form();
 social();
+textAppearance();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();

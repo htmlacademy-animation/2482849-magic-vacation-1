@@ -1,3 +1,119 @@
+@keyframes siutcaseUp {
+  from {
+    transform: scale(0.05) translateY(300%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0%);
+  }
+}
+
+@keyframes flamingoUp {
+  from {
+    transform: scale(0.5) translate3d(-25%, -96%, 0);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(0.65) translate3d(-25%, -136%, 0);
+  }
+}
+
+@keyframes flamingoUpandDown {
+  from {
+    transform: scale(0.65) translate3d(-25%, -136%, 0) rotate(0deg);
+  }
+  50% {
+    transform: scale(0.62) translate3d(-23%, -133%, 0) rotate(3deg);
+
+  }
+  to {
+    transform: scale(0.65) translate3d(-25%, -136%, 0) rotate(0deg);
+  }
+}
+
+@keyframes rightLeaf {
+  from {
+    transform: rotate(-7deg) scale(0.9) translate3d(0%, -30%, 0) skew(0deg, 0deg);
+  }
+  20% {
+    transform: rotate(35deg) scale(1.1) translate3d(6%, -2%, 0) skew(0deg, 3deg);
+  }
+  40% {
+    transform: rotate(4deg) scale(1.05) translate3d(2%, -25%, 0) skew(0deg, 0.5deg);
+  }
+  60% {
+    transform: rotate(28deg) scale(1.1) translate3d(4%, -1%, 0) skew(0deg, 2.5deg);
+  }
+  80% {
+    transform: rotate(10deg) scale(1.08) translate3d(2%, -25%, 0) skew(0deg, 1deg);
+  }
+  90% {
+    transform: rotate(16deg) scale(1.1) translate3d(4%, -18%, 0) skew(0deg, 2deg);
+  }
+  to {
+    transform: rotate(12deg) scale(1.09) translate3d(2%, -20%, 0) skew(0deg, 1.5deg);
+  }
+}
+
+@keyframes leftLeaf {
+  from {
+    transform: rotate(22deg) scale(0.9) translate3d(0%, -0%, 0) skew(0deg, 0deg);
+  }
+  22% {
+    transform:  rotate(-5deg) scale(1.0) translate3d(-4%, 13%, 0) skew(0deg, 3deg);
+  }
+  42% {
+    transform: rotate(16deg) scale(0.98) translate3d(-1%, 4%, 0) skew(0deg, 0.5deg);
+  }
+  62% {
+    transform:  rotate(5deg) scale(1.0) translate3d(-2%, 6%, 0) skew(0deg, 2.5deg);
+  }
+  82% {
+    transform: rotate(14deg) scale(0.985) translate3d(-1.5%, 4.5%, 0) skew(0deg, 1deg);
+  }
+  90% {
+    transform:  rotate(7deg) scale(1.0) translate3d(-2%, 5%, 0) skew(0deg, 2deg);
+  }
+  100% {
+    transform: rotate(10deg) scale(0.95) translate3d(-1.5%, 4.7%, 0) skew(0deg, 1.5deg);
+  }
+}
+
+@keyframes greenLeafSwing {
+  from {
+    transform: rotate(6deg) scale(0.9) skew(0deg, 0deg);
+  }
+  20% {
+    transform: rotate(0deg) scale(1.1) skew(0deg, 3deg);
+  }
+  40% {
+    transform: rotate(5deg) scale(1.05) skew(0deg, 0.5deg);
+  }
+  60% {
+    transform: rotate(0.5deg) scale(1.1) skew(0deg, 2.5deg);
+  }
+  80% {
+    transform: rotate(3deg) scale(1.08) skew(0deg, 1deg);
+  }
+  90% {
+    transform: rotate(0.8) scale(1.1) skew(0deg, 2deg);
+  }
+  to {
+    transform: rotate(1deg) scale(1.09) skew(0deg, 1.5deg);
+  }
+}
+
+@keyframes leafAppearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .result {
   flex-grow: 1;
   display: flex;
@@ -22,6 +138,25 @@
   }
 }
 
+.result__leavesWrap {
+  position: absolute;
+    width: 120%;
+    opacity: 0;
+    top: 18%;
+    left: -10%;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    animation-name: leafAppearance;
+    animation-duration: 800ms;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
 .result__image {
   position: absolute;
   top: 0;
@@ -33,6 +168,88 @@
   justify-content: center;
   align-items: center;
   z-index: -1;
+  overflow: visible;
+
+  &--suitcaseWrap {
+    display: block;
+    width: 27vw;
+    height: 45vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 20vh;
+    overflow: visible;
+
+    @media (max-width: $tablet) {
+      width: 40vw;
+    }
+  
+    @media (max-width: $mobile) {
+      width: 64vw;
+    }
+  }
+
+  &--leaf {
+    position: absolute;
+    height: 40% !important;
+    width: 49% !important;
+    right: -22%;
+    top: 29%;
+    opacity: 0;
+    animation-name: greenLeafSwing, leafAppearance;
+    animation-duration: 8s, 800ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.7s, 1.7s;
+    animation-fill-mode: forwards;
+  }
+
+  &--suitcase {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    will-change: transform, opacity;
+    animation-name: siutcaseUp;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+  }
+
+  &--flamingo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    will-change: transform, opacity;
+    transform: scale(0.7) translateY(100%);
+    animation-name: flamingoUp, flamingoUpandDown;
+    animation-duration: 1.5s, 3s;
+    animation-delay: 300ms, 1.8s;
+    animation-iteration-count: 1, infinite;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-fill-mode: forwards, forwards;
+  }
+
+  &--leafBlue1 {
+    animation-name: rightLeaf;
+    animation-duration: 10s;
+    animation-delay: 1.6s;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+
+  &--leafBlue2 {
+    animation-name: leftLeaf;
+    animation-duration: 10s;
+    animation-delay: 1.6s;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
 
   @media (orientation: portrait) {
     left: -1rem;
@@ -49,7 +266,6 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     object-position: center;
   }
 }

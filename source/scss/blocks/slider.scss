@@ -269,9 +269,119 @@
   }
 }
 
+// фиолетовая тема
 body.theme-violet {
+  // переключатель
+  .social-block__toggler {
+    color: $c-dark;
+
+    &:hover,
+    .social-block--active & {
+      color: $c-dark;
+    }
+
+    &:focus {
+      color: $c-dark;
+      &::before {
+        border-color: $c-dark;
+      }
+    }
+
+    &:active,
+    &:active:focus {
+      color: $c-light;
+
+      &::before {
+        width: 100%;
+        height: 100%;
+        background-color: $c-dark;
+        border-color: $c-dark;
+      }
+    }
+  }
+
+  .social-block__toggler svg {
+    &:hover,
+    .social-block--active & {
+    color: $c-dark;
+    }
+
+    &:focus {
+      color: $c-dark;
+      outline: none;
+  
+      &::before {
+        border-color: $c-dark;
+      }
+
+      &:active,
+      &:active:focus {
+        color: $c-dark;
+
+        &::before {
+        background-color: $c-dark;
+        border-color: $c-dark;
+        }
+      }
+    }
+  }
+
+  // иконки соцсетей
+  .social-block__link {
+    &:hover {
+      color: $c-dark;
+    }
+
+    &:focus {
+      color: $c-dark;
+      border-color: $c-dark;
+    }
+
+    &:active,
+    &:active:focus {
+    color: $c-dark;
+    }
+  }
+
+  // кнопочки слайдера
   .slider__control {
     color: $c-dark;
+
+    &::before {
+      border: 2px solid $c-dark;
+    }
+
+    &:active,
+    &:active:focus {
+      color: $c-dark;
+
+    &::before {
+      background-color: $c-dark;
+      border-color: $c-dark;
+    }
+  }
+  }
+
+  .page-header__menu {
+    a {
+      // динамическое подчеркивание пункта меню при наведении
+      &::before {
+        background-color: $c-dark;
+      }
+      // статичное подчеркивание активного пункта меню
+      // &::after {
+      //   background-color: $c-dark;
+      // }
+
+      // цвет пункта меню при наведении
+      &:hover,
+      &:focus {
+        color: $c-dark;
+        &::after {
+          background-color: $c-dark;
+        }
+      }
+    }
   }
 }
 
@@ -375,18 +485,132 @@ body.theme-blue {
         background-color: $c-blue;
       }
       // статичное подчеркивание активного пункта меню
-      &::after {
-        background-color: $c-blue;
-      }
+      // &::after {
+      //   background-color: $c-blue;
+      // }
 
       // цвет пункта меню при наведении
       &:hover,
       &:focus {
         color: $c-blue;
-      &::after {
-        background-color: $c-blue;
+        &::after {
+          background-color: $c-blue;
+        }
       }
     }
+  }
+}
+
+// голубая тема
+body.theme-lightBlue {
+  // переключатель
+  .social-block__toggler {
+    color: $c-lightBlue;
+
+    &:hover,
+    .social-block--active & {
+      color: $c-lightBlue;
+    }
+
+    &:focus {
+      color: $c-lightBlue;
+      &::before {
+        border-color: $c-lightBlue;
+      }
+    }
+
+    &:active,
+    &:active:focus {
+      color: $c-lightBlue;
+
+      &::before {
+        background-color: $c-lightBlue;
+        border-color: $c-lightBlue;
+      }
+    }
+  }
+
+  .social-block__toggler svg {
+    &:hover,
+    .social-block--active & {
+    color: $c-lightBlue;
+    }
+
+    &:focus {
+      color: $c-lightBlue;
+      outline: none;
+  
+      &::before {
+        border-color: $c-lightBlue;
+      }
+
+      &:active,
+      &:active:focus {
+        color: $c-lightBlue;
+
+        &::before {
+        background-color: $c-lightBlue;
+        border-color: $c-lightBlue;
+        }
+      }
+    }
+  }
+
+  // иконки соцсетей
+  .social-block__link {
+    &:hover {
+      color: $c-lightBlue;
+    }
+
+    &:focus {
+      color: $c-lightBlue;
+      border-color: $c-lightBlue;
+    }
+
+    &:active,
+    &:active:focus {
+    color: $c-lightBlue;
+    }
+  }
+
+  // кнопочки слайдера
+  .slider__control {
+    color: $c-lightBlue;
+
+    &::before {
+      border: 2px solid $c-lightBlue;
+    }
+
+    &:active,
+    &:active:focus {
+      color: $c-lightBlue;
+
+    &::before {
+      background-color: $c-lightBlue;
+      border-color: $c-lightBlue;
+    }
+  }
+  }
+
+  .page-header__menu {
+    a {
+      // динамическое подчеркивание пункта меню при наведении
+      &::before {
+        background-color: $c-lightBlue;
+      }
+      // статичное подчеркивание активного пункта меню
+      // &::after {
+      //   background-color: $c-lightBlue;
+      // }
+
+      // цвет пункта меню при наведении
+      &:hover,
+      &:focus {
+        color: $c-lightBlue;
+        &::after {
+          background-color: $c-lightBlue;
+        }
+      }
     }
   }
 }

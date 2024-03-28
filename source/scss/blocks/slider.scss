@@ -368,10 +368,6 @@ body.theme-violet {
       &::before {
         background-color: $c-dark;
       }
-      // статичное подчеркивание активного пункта меню
-      // &::after {
-      //   background-color: $c-dark;
-      // }
 
       // цвет пункта меню при наведении
       &:hover,
@@ -484,10 +480,6 @@ body.theme-blue {
       &::before {
         background-color: $c-blue;
       }
-      // статичное подчеркивание активного пункта меню
-      // &::after {
-      //   background-color: $c-blue;
-      // }
 
       // цвет пункта меню при наведении
       &:hover,
@@ -598,10 +590,6 @@ body.theme-lightBlue {
       &::before {
         background-color: $c-lightBlue;
       }
-      // статичное подчеркивание активного пункта меню
-      // &::after {
-      //   background-color: $c-lightBlue;
-      // }
 
       // цвет пункта меню при наведении
       &:hover,

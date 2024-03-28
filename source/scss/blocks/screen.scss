@@ -1,3 +1,14 @@
+@keyframes textAppearance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .screen {
   position: relative;
   display: flex;
@@ -95,6 +106,20 @@
     }
   }
 }
+
+.screen__footer.js-footer.screen__footer--full {
+  .screen__footer-textWrapper {
+    @media (max-width: $mobile) {
+      opacity: 0;
+      animation-name: textAppearance;
+      animation-delay: 400ms;
+      animation-duration: 800ms;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
 
 .screen__footer-enlarge {
   @include btn-reset;

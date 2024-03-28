@@ -114,6 +114,15 @@
   }
 }
 
+@keyframes rollToTheLeft {
+  from {
+    transform: translate3d(3rem, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .result {
   flex-grow: 1;
   display: flex;
@@ -331,6 +340,12 @@
   font-size: 2.4rem;
   line-height: 1.2;
   color: $c-light;
+  opacity: 0;
+  animation-name: leafAppearance;
+  animation-duration: 350ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+
 
   @media (min-width: $stop-scaling) {
     margin: auto auto 10px;
@@ -363,6 +378,10 @@
     width: 4rem;
     height: 4rem;
     color: $c-dark;
+    transform: translate3d(3rem, 0, 0);
+    animation-name: rollToTheLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 
     @media (min-width: $stop-scaling) {
       margin-left: 15px;

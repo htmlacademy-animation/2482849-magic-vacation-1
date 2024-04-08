@@ -334,6 +334,12 @@
 .prizes__airplane,
 .prizes__airplaneSmoke--upper,
 .prizes__airplaneSmoke--middle,
-.prizes__airplaneSmoke--down {
+.prizes__airplaneSmoke--down,
+.prizes__cloud--left {
   transform-box: fill-box;
+}
+
+.prizes__cloud--left,
+.prizes__cloud--right {
+  opacity: 0;
 }

@@ -330,3 +330,10 @@
     }
   }
 }
+// Пошли стили для анимаций к заданиям с свг-анимациями
+.prizes__airplane,
+.prizes__airplaneSmoke--upper,
+.prizes__airplaneSmoke--middle,
+.prizes__airplaneSmoke--down {
+  transform-box: fill-box;
+}

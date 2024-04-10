@@ -335,11 +335,32 @@
 .prizes__airplaneSmoke--upper,
 .prizes__airplaneSmoke--middle,
 .prizes__airplaneSmoke--down,
-.prizes__cloud--left {
+.prizes__cloud--left,
+.prizes__airplaneWindow {
   transform-box: fill-box;
 }
 
 .prizes__cloud--left,
 .prizes__cloud--right {
+  opacity: 0;
+}
+
+.prizes__airplaneWindow {
+  position: absolute;
+  z-index: 10;
+}
+
+.prizes__to {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  top: 0;
+  right: 0;
+  // opacity: 0;
+}
+
+.prizes__chairInside {
   opacity: 0;
 }

@@ -429,7 +429,7 @@
                     begin="airplaneWindowMove.begin"
                   />
 
-
+                  <!-- псевдо полет аэроплана -->
                   <g class="prizes__airplane">
                     <animateTransform
                       attributeName="transform"
@@ -454,12 +454,12 @@
                       id="airplaneWindowMove"
                       attributeName="transform"
                       type="translate"
-                      values="0 0; 43 -70"
+                      values="0 0; 73 -70"
                       keyTimes="0; 1"
-                      dur="3s"
+                      dur="1s"
                       additive="sum"
                       repeatCount="1"
-                      begin="mountainsFalling.begin - 100ms"
+                      begin="mountainsFalling.begin"
                       fill="freeze"
                     />
                     <animateTransform 
@@ -468,20 +468,20 @@
                       type="scale"
                       values="1 1; 5 6"
                       keyTimes="0; 1"
-                      dur="3s"
+                      dur="1s"
                       additive="sum"
                       repeatCount="1"
-                      begin="mountainsFalling.begin - 100ms"
+                      begin="mountainsFalling.begin"
                       fill="freeze"
                     />
                     <animate 
                       href="#airplaneWindow"
                       attributeType="CSS"
                       attributeName="opacity"
-                      begin="mountainsFalling.begin - 100ms"
+                      begin="mountainsFalling.begin"
                       values="1; 0"
                       keyTimes="0; 1"
-                      dur="3s"
+                      dur="200ms"
                       repeatCount="1"
                       fill="freeze"
                       />
@@ -504,6 +504,7 @@
                     <path id="prize__airplane--before16" d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2A9,9,0,0,0,123.23,207.39Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                   </g>
                   <g class="prizes__cloud--left prize__airplane--before">
+                    <!-- облака пошли -->
                     <animateMotion 
                     id="cloudFly"
                     from="200,0" 
@@ -537,7 +538,6 @@
                     <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
                   </g>
                   <g class="prizes__cloud--right prize__airplane--before">
-                    <!-- не знаю, почему облака опять появляются на секунду при исчезновении дирижабля -->
                     <animateMotion 
                     id="cloudRightFly"
                     begin="2s"
@@ -615,10 +615,10 @@
                     href="#mountains" 
                     id="mountainsFalling"
                     attributeName="d" 
-                    begin="3.8s"
+                    begin="3.7s"
                     from="M 289.94 327.88 L 244.88 327.88 L 212.8 296.58 C 212.459 296.292 212.027 296.134 211.58 296.134 C 211.133 296.134 210.701 296.292 210.36 296.58 L 200.16 306.81 C 199.848 307.08 199.448 307.229 199.035 307.229 C 198.622 307.229 198.222 307.08 197.91 306.81 C 191.577 300.087 185.243 293.363 178.91 286.64 C 178.477 286.274 177.927 286.072 177.36 286.072 C 176.793 286.072 176.243 286.274 175.81 286.64 C 167.003 295.187 158.197 303.733 149.39 312.28 C 149.079 312.552 148.679 312.702 148.265 312.702 C 147.851 312.702 147.451 312.552 147.14 312.28 C 146.263 311.307 145.387 310.333 144.51 309.36 C 144.195 309.071 143.782 308.911 143.355 308.911 C 142.928 308.911 142.515 309.071 142.2 309.36 C 136.343 315.907 130.487 322.453 124.63 329 L 80.78 329 M 80.78 328 L 289.94 328" 
                     to="M 289.94 328 L 271.982 328 L 254.024 328 C 248.038 328 242.052 328 236.066 328 C 230.08 328 224.094 328 218.108 328 L 200.15 328 C 199.29 328 198.59 328 197.9 328 C 191.567 328 185.233 328 178.9 328 C 178.525 328 178.198 328 177.905 328 C 177.612 328 177.353 328 177.114 328 C 176.874 328 176.655 328 176.44 328 C 176.226 328 176.018 328 175.8 328 C 165.033 328 154.267 328 143.5 328 C 143.282 328 143.085 328 142.904 328 C 142.722 328 142.557 328 142.403 328 C 142.249 328 142.106 328 141.97 328 C 141.834 328 141.704 328 141.575 328 C 141.447 328 141.32 328 141.19 328 L 80.78 328 M 80.78 328 L 80.78 328" 
-                    dur="600ms"
+                    dur="400ms"
                     fill="freeze"
                     />
                     <path id="mountains" d="M289.94,327.88H244.88L212.8,296.58a1.89,1.89,0,0,0-2.44,0l-10.2,10.23a1.72,1.72,0,0,1-2.25,0l-19-20.17a2.4,2.4,0,0,0-3.1,0l-26.42,25.64a1.71,1.71,0,0,1-2.25,0l-2.63-2.92a1.71,1.71,0,0,0-2.31,0L124.63,329H80.78" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -629,6 +629,7 @@
                 <svg class="prizes__to" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 350 330">
                   <animate 
                     href="#chair"
+                    id="chairAppearance"
                     attributeType="CSS"
                     attributeName="opacity"
                     values="0; 1"
@@ -636,10 +637,21 @@
                     dur="3s"
                     repeatCount="1"
                     fill="freeze"
-                    begin="airplaneDissapeared.begin + 150ms"
+                    begin="airplaneDissapeared.begin"
                   />
+                  <animateTransform 
+                      attributeName="transform"
+                      type="translate"
+                      values="0 0; 55 0"
+                      keyTimes="0; 1"
+                      dur="2s"
+                      additive="sum"
+                      repeatCount="1"
+                      begin="airplaneDissapeared.begin"
+                      fill="freeze"
+                    />
                   <defs>
-                    <clipPath id="window">
+                    <clipPath id="windowChair1">
                       <path d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z"/>
                     </clipPath>
                   </defs>
@@ -647,22 +659,68 @@
                     <path d="M91.14,327.79a2.2,2.2,0,0,1-2-2.36l13.66-193.17c1.1-15.49-4.8-21.92-8.75-24.47a1.35,1.35,0,0,1,.53-2.45C103,104,122.18,104,120,134.19L106.43,326.67a2.2,2.2,0,0,1-2.35,2Z" fill="#fff"/>
                     <path d="M124.5,328.17a2.2,2.2,0,0,1-2.17-2.23l2.24-193.63c0.19-15.53-6.07-21.61-10.16-23.91a1.35,1.35,0,0,1,.39-2.47c8.36-1.9,27.49-3,27.15,27.28l-2.25,192.93a2.2,2.2,0,0,1-2.22,2.18Z" fill="#fff"/>
                   </g>
-                  <g class="prizes__chairInside">
+                  <g class="prizes__chairInside prizes__chairWindow" id="windowChair2">
                     <!-- Пространство окна -->
+                    <animate 
+                      attributeType="CSS"
+                      attributeName="opacity"
+                      values="0; 1"
+                      keyTimes="0; 1"
+                      begin="chairAppearance.begin + 200ms"
+                      dur="300ms"
+                      repeatCount="1"
+                      fill="freeze"
+                      />
+                      <animateTransform 
+                      attributeName="transform"
+                      type="translate"
+                      values="-50 100; 0 0"
+                      keyTimes="0; 1"
+                      dur="1s"
+                      additive="sum"
+                      repeatCount="1"
+                      begin="chairAppearance.begin"
+                      fill="freeze"
+                    />
+                    <animateTransform 
+                      attributeName="transform"
+                      type="scale"
+                      values="0.1; 1"
+                      keyTimes="0; 1"
+                      dur="1s"
+                      additive="sum"
+                      repeatCount="1"
+                      begin="chairAppearance.begin"
+                      fill="freeze"
+                    />
                     <path d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z" fill="none" stroke="#fff" stroke-width="2"/>
-                  </g>
-                  <g clip-path="url(#window)" class="prizes__chairInside">
-                    <g transform="translate(220 160)">
-                      <g>
-                        <!-- тучка с солнышком -->
+                    <!-- не знаю, как спрятать облака за окно -->
+                    <g clip-path="url(#window)" class="prizes__chairInside">
+                      <animate 
+                        attributeType="CSS"
+                        attributeName="opacity"
+                        values="0; 1"
+                        keyTimes="0; 1"
+                        begin="chairAppearance.end + 1s"
+                        dur="100ms"
+                        repeatCount="1"
+                        fill="freeze"
+                        />
+                      <g transform="translate(220 160)">
+                        <animateMotion
+                          from="100,0" 
+                          to="-300, 0" 
+                          dur="6s"
+                          repeatCount="1"
+                          fill="freeze"
+                          begin="chairAppearance.end + 1s"
+                          restart="never"
+                          />
                         <line x1="28.18" y1="38.34" x2="91.09" y2="38.34" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
                         <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
                         <line x1="218.19" y1="23.72" x2="257.97" y2="23.72" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
-                      </g>
-                      <!-- Правая тучка -->
-                      <g>
-                        <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" transform="translate(-40.77 -69.46)" fill="none" stroke="red" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
-                        <line x1="246.24" y1="13.45" x2="268.43" y2="13.45" fill="none" stroke="red" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+                        <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+                        <line x1="246.24" y1="13.45" x2="268.43" y2="13.45" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
                       </g>
                     </g>
                   </g>
@@ -681,7 +739,38 @@
                     <path d="M206.26,259.82h-72l-2.13-14.19H200.6a9.92,9.92,0,0,1,9.9,9.93A4.26,4.26,0,0,1,206.26,259.82Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                     <line x1="151.57" y1="195.44" x2="209.05" y2="195.44" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
                   </g>
-                  <g class="prizes__chairInside">
+                  <!-- листик - появляется через 400мс после начала появления кресла, конец анимации в тот же момент, что и появление кресла-->
+                  <g class="prizes__chairInside prizes__chairLeaf">
+                    <animate 
+                      attributeType="CSS"
+                      attributeName="opacity"
+                      values="0; 1"
+                      keyTimes="0; 1"
+                      begin="chairAppearance.begin + 400ms"
+                      dur="2.6s"
+                      repeatCount="1"
+                      fill="freeze"
+                      />
+                    <animateTransform 
+                      id="leafAppearance"
+                      attributeName="transform"
+                      type="skewX"
+                      values="6; -2; 0"
+                      keyTimes="0; 0.7; 1"
+                      dur="2.6s"
+                      additive="sum"
+                      begin="chairAppearance.begin + 400ms"
+                      repeatCount="1"/>
+                      <animateTransform
+                      attributeName="transform"
+                      type="scaleY"
+                      values="1; 1.01; 1; 0.99; 1 "
+                      keyTimes="0; 0.25; 0.5; 0.75; 1"
+                      begin="leafAppearance.end"
+                      dur="3s"
+                      additive="sum"
+                      repeatCount="3"
+                    />
                     <path d="M79.18,194A131,131,0,0,1,94.77,220.9a255,255,0,0,1-20.08-23.55,259,259,0,0,1-17.07-25.88A131.72,131.72,0,0,1,79.18,194" fill="#36e69a"/>
                     <path d="M80.94,214.39a127.19,127.19,0,0,1,22.8,20.49A242.09,242.09,0,0,1,77.9,219.17a235.86,235.86,0,0,1-23.42-18.7,119.82,119.82,0,0,1,26.46,13.92" fill="#36e69a"/>
                     <path d="M93.66,205.48a258.38,258.38,0,0,0,10.08,29.39,125.63,125.63,0,0,0-4.5-30.52,135.9,135.9,0,0,0-12.06-29.44,260.33,260.33,0,0,0,6.47,30.57" fill="#36e69a"/>

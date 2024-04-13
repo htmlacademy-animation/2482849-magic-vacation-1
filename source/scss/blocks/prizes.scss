@@ -339,7 +339,9 @@
 .prizes__airplaneWindow,
 .prizes__chairWindow,
 .prizes__chairLeaf,
-.prizes__chairSunCloud {
+.prizes__chairSunCloud,
+.prizes__secondary--BigLeaf,
+.prizes__secondary--TinyLeaf {
   transform-box: fill-box;
 }
 
@@ -369,4 +371,13 @@
 
 .prizes__chairInside {
   opacity: 0;
+}
+
+.prizes {
+  &__secondary{
+    &--unvisible {
+      opacity: 0;
+    }
+
+  }
 }

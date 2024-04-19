@@ -339,7 +339,9 @@
 .prizes__airplaneWindow,
 .prizes__chairWindow,
 .prizes__chairLeaf,
-.prizes__chairSunCloud {
+.prizes__chairSunCloud,
+.prizes__secondary--BigLeaf,
+.prizes__secondary--TinyLeaf {
   transform-box: fill-box;
 }
 
@@ -357,7 +359,12 @@
   overflow: hidden;
 }
 
-.prizes__to {
+.prizes__iconWrap {
+  position: relative;
+}
+
+.prizes__to,
+.prizes__secondary--to {
   position: absolute;
   width: 100%;
   max-width: 100%;
@@ -365,8 +372,16 @@
   max-height: 100%;
   top: 0;
   right: 0;
-}
+} 
 
 .prizes__chairInside {
   opacity: 0;
+}
+
+.prizes {
+  &__secondary{
+    &--unvisible {
+      opacity: 0;
+    }
+  }
 }

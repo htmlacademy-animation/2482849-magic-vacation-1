@@ -359,7 +359,12 @@
   overflow: hidden;
 }
 
-.prizes__to {
+.prizes__iconWrap {
+  position: relative;
+}
+
+.prizes__to,
+.prizes__secondary--to {
   position: absolute;
   width: 100%;
   max-width: 100%;
@@ -367,7 +372,7 @@
   max-height: 100%;
   top: 0;
   right: 0;
-}
+} 
 
 .prizes__chairInside {
   opacity: 0;
@@ -378,6 +383,5 @@
     &--unvisible {
       opacity: 0;
     }
-
   }
 }

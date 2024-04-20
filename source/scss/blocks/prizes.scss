@@ -340,8 +340,16 @@
 .prizes__airplaneWindow,
 .prizes__chairWindow,
 .prizes__chairLeaf,
-.prizes__chairSunCloud {
+.prizes__chairSunCloud,
+.prizes__secondary--BigLeaf,
+.prizes__secondary--TinyLeaf,
+.prizes__siutcaseBigFlowers {
   transform-box: fill-box;
+}
+
+.prizes__siutcaseBigFlowers,
+.prizes__siutcazeLittleLeaf {
+  transform-origin: 50% 100%;
 }
 
 .prizes__cloud--left,
@@ -358,7 +366,12 @@
   overflow: hidden;
 }
 
-.prizes__to {
+.prizes__iconWrap {
+  position: relative;
+}
+
+.prizes__to,
+.prizes__secondary--to {
   position: absolute;
   width: 100%;
   max-width: 100%;
@@ -366,12 +379,20 @@
   max-height: 100%;
   top: -1%;
   right: 0;
-}
+} 
 
 .prizes__chairInside {
   opacity: 0;
 }
 
 .prizes__siutcazeBefore {
-  opacity: 0;
+  opacity: 1;
+}
+
+.prizes {
+  &__secondary{
+    &--unvisible {
+      opacity: 0;
+    }
+  }
 }

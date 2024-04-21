@@ -22,5 +22,8 @@ form();
 social();
 textAppearance();
 
+// const letter = document.getElementById('word1');
+// console.log(letter.getTotalLength());
+
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();

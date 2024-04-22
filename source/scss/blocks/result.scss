@@ -475,11 +475,16 @@
   }
 }
 
+.result__LoseTitleSvg {
+  overflow: visible;
+}
+
 .result--negative {
   .result__title {
     margin-top: 9.5rem;
     width: 66.5rem;
     height: 11.3rem;
+    overflow: visible;
 
     @media (min-width: $stop-scaling) {
       margin-top: 95px;

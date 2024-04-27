@@ -9,6 +9,7 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import textAppearance from './modules/text-appearance.js';
+import game from './modules/game';
 
 // init modules
 
@@ -21,9 +22,7 @@ result();
 form();
 social();
 textAppearance();
-
-const letter = document.getElementById('word1');
-console.log(letter.getTotalLength());
+game();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();

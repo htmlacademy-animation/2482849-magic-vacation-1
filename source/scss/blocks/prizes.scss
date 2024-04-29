@@ -111,6 +111,12 @@
     margin-left: 75px;
   }
 
+  @media (min-width: $tablet) and (orientation: portrait) {
+    width: 23%;
+    min-width: 23%;
+    margin-left: 0;
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     display: flex;
     align-items: flex-end;
@@ -236,6 +242,11 @@
   margin: 5.6rem 0 0 0;
   font-size: 1.8rem;
   line-height: 1.1;
+
+  // & b {
+  //   min-width: 30%;
+  //   width: 30%;
+  // }
 
   @media (min-width: $stop-scaling) {
     margin-top: 56px;
@@ -396,4 +407,87 @@
       opacity: 0;
     }
   }
+}
+
+@keyframes journeysMoveToTheLeft {
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes numberAppearance {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes spanAppearance {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.prizes__item--journeys {
+  transform: translate3d(35rem, 0, 0);
+  animation-name: journeysMoveToTheLeft;
+  animation-duration: 1.5s;
+  animation-delay: 5s;
+  animation-timing-function: cubic-bezier(.64,-0.35,.76,1.34);
+  animation-fill-mode: forwards;
+}
+
+.prizes__item--journeys .prizes__desc b {
+  opacity: 0;
+  animation-name: numberAppearance;
+  animation-duration: 300ms;
+  animation-delay: 3.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.prizes__item--journeys .prizes__desc span {
+  opacity: 0;
+  transform: translate3d(1rem, 0, 0);
+  animation-name: spanAppearance;
+  animation-duration: 300ms;
+  animation-delay: 3.35s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.prizes__item--cases .prizes__desc b {
+  opacity: 0;
+  animation-name: numberAppearance;
+  animation-duration: 300ms;
+  animation-delay: 10.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.prizes__item--cases .prizes__desc span {
+  opacity: 0;
+  transform: translate3d(1rem, 0, 0);
+  animation-name: spanAppearance;
+  animation-duration: 300ms;
+  animation-delay: 10.35s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.prizes__item--codes .prizes__desc b {
+  opacity: 0;
+  animation-name: numberAppearance;
+  animation-duration: 300ms;
+  animation-delay: 17.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.prizes__item--codes .prizes__desc span {
+  opacity: 0;
+  transform: translate3d(1rem, 0, 0);
+  animation-name: spanAppearance;
+  animation-duration: 300ms;
+  animation-delay: 17.35s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 }

@@ -8,8 +8,9 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
-import textAppearance from './modules/text-appearance.js';
 import game from './modules/game';
+import prizes from './modules/prizes';
+import textAppearance from './modules/text-appearance.js';
 
 // init modules
 
@@ -21,8 +22,10 @@ chat();
 result();
 form();
 social();
-textAppearance();
 game();
+prizes();
+
+textAppearance();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();

@@ -111,6 +111,12 @@
     margin-left: 75px;
   }
 
+  @media (min-width: $tablet) and (orientation: portrait) {
+    width: 23%;
+    min-width: 23%;
+    margin-left: 0;
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     display: flex;
     align-items: flex-end;
@@ -236,6 +242,11 @@
   margin: 5.6rem 0 0 0;
   font-size: 1.8rem;
   line-height: 1.1;
+
+  // & b {
+  //   min-width: 30%;
+  //   width: 30%;
+  // }
 
   @media (min-width: $stop-scaling) {
     margin-top: 56px;
@@ -466,7 +477,7 @@
   opacity: 0;
   animation-name: numberAppearance;
   animation-duration: 300ms;
-  animation-delay: 14.3s;
+  animation-delay: 17.3s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
@@ -476,7 +487,7 @@
   transform: translate3d(1rem, 0, 0);
   animation-name: spanAppearance;
   animation-duration: 300ms;
-  animation-delay: 14.35s;
+  animation-delay: 17.35s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
